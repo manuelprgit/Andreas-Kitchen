@@ -3,7 +3,7 @@
 $very-light-pink: #c7c7c7;
 $smooth-gray: #8e8e8e;
 $text-input-field: #f7f7f7;
-$hospital-green: #847c32;
+$primary-color: #847c32;
 $secondary-color: #829a7c;
 
 $white: white;
@@ -179,15 +179,14 @@ body {
 }
 
 .btn-success {
-    background-color: $hospital-green;
+    background-color: $primary-color;
 }
 
 .btn-secondary-successs {
     background-color: $white;
-    color: $hospital-green;
-    border: solid 2px $hospital-green;
+    color: $primary-color;
+    border: solid 2px $primary-color;
     margin-top: 22px;
-
 }
 
 
@@ -274,14 +273,14 @@ body {
             color: $smooth-gray;
 
             a {
-                color: $hospital-green;
+                color: $primary-color;
                 font-weight: 600;
                 text-decoration: none;
             }
         }
 
         a {
-            color: $hospital-green;
+            color: $primary-color;
             text-decoration: none;
             text-align: center;
             font-size: $m;
