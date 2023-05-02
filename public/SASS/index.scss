@@ -464,6 +464,17 @@ table {
     }
 }
 
+.my-orders{
+    @extend .my-order;
+    .my-order-container{        
+        .total-order-container{
+            background-color: $white ;
+            margin-bottom: 0 ;
+            grid-template-columns: auto 1fr auto;
+        }
+    }
+}
+
 
 
 @media(max-width: 1024px) {
@@ -495,7 +506,7 @@ table {
         }
     }
     .my-order-container{
-        width: auto !important;
+        width: 90% !important;
     }
 }
 

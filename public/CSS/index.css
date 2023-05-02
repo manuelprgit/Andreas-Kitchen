@@ -334,22 +334,22 @@ table {
   color: #8e8e8e;
 }
 
-.my-order {
+.my-order, .my-orders {
   width: 100%;
   display: grid;
   place-items: center;
 }
-.my-order .my-order-container {
+.my-order .my-order-container, .my-orders .my-order-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   width: 450px;
 }
-.my-order .my-order-container h1 {
+.my-order .my-order-container h1, .my-orders .my-order-container h1 {
   font-size: 18px;
   font-weight: 800;
   margin-bottom: 40px;
 }
-.my-order .my-order-container .total-order-container {
+.my-order .my-order-container .total-order-container, .my-orders .my-order-container .total-order-container {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 16px;
@@ -359,45 +359,51 @@ table {
   padding: 24px;
   margin-bottom: 24px;
 }
-.my-order .my-order-container .total-order-container .cuantity {
+.my-order .my-order-container .total-order-container .cuantity, .my-orders .my-order-container .total-order-container .cuantity {
   display: flex;
   flex-direction: column;
 }
-.my-order .my-order-container .total-order-container .cuantity span:nth-child(1) {
+.my-order .my-order-container .total-order-container .cuantity span:nth-child(1), .my-orders .my-order-container .total-order-container .cuantity span:nth-child(1) {
   font-weight: 800;
   font-size: 18px;
   margin-bottom: 8px;
 }
-.my-order .my-order-container .total-order-container .cuantity span:nth-child(2) {
+.my-order .my-order-container .total-order-container .cuantity span:nth-child(2), .my-orders .my-order-container .total-order-container .cuantity span:nth-child(2) {
   color: #8e8e8e;
   font-size: 16px;
 }
-.my-order .my-order-container .total-order-container p:nth-child(2) {
+.my-order .my-order-container .total-order-container p:nth-child(2), .my-orders .my-order-container .total-order-container p:nth-child(2) {
   font-size: 18px;
   font-weight: 800;
   text-align: end;
 }
-.my-order .my-order-container .order-container .article {
+.my-order .my-order-container .order-container .article, .my-orders .my-order-container .order-container .article {
   display: grid;
   grid-template-columns: auto 1fr auto auto;
   gap: 16px;
   align-items: center;
   margin-bottom: 24px;
 }
-.my-order .my-order-container .order-container .article .img-content {
+.my-order .my-order-container .order-container .article .img-content, .my-orders .my-order-container .order-container .article .img-content {
   width: 100px;
 }
-.my-order .my-order-container .order-container .article .img-content img {
+.my-order .my-order-container .order-container .article .img-content img, .my-orders .my-order-container .order-container .article .img-content img {
   object-fit: cover;
   border-radius: 22px;
 }
-.my-order .my-order-container .order-container .article p:nth-child(2) {
+.my-order .my-order-container .order-container .article p:nth-child(2), .my-orders .my-order-container .order-container .article p:nth-child(2) {
   font-weight: 300;
   color: #8e8e8e;
 }
-.my-order .my-order-container .order-container .article p:nth-child(3) {
+.my-order .my-order-container .order-container .article p:nth-child(3), .my-orders .my-order-container .order-container .article p:nth-child(3) {
   font-weight: 800;
   font-size: 18px;
+}
+
+.my-orders .my-order-container .total-order-container {
+  background-color: white;
+  margin-bottom: 0;
+  grid-template-columns: auto 1fr auto;
 }
 
 @media (max-width: 1024px) {
@@ -425,7 +431,7 @@ table {
     width: 140px;
   }
   .my-order-container {
-    width: auto !important;
+    width: 90% !important;
   }
 }
 @media (max-width: 500px) {
