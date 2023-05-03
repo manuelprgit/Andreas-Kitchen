@@ -2,7 +2,7 @@
 
 $very-light-pink: #c7c7c7;
 $smooth-gray: #8e8e8e;
-$text-input-field: #f7f7f7;
+$text-input-field: #ebebeb;
 $primary-color: #847c32;
 $smooth-primary-color: #e8e19e;
 $secondary-color: #829a7c;
@@ -110,7 +110,8 @@ button {
     font-family: $nunito-font;
     box-sizing: border-box;
 }
-svg path{
+
+svg path {
     fill: currentColor;
 }
 
@@ -171,6 +172,7 @@ table {
     margin-bottom: 28px;
     color: $white;
 }
+
 .btn-success {
     background-color: $primary-color;
 }
@@ -422,7 +424,7 @@ table {
     }
 }
 
-.product-details{
+.product-details {
     width: 500px;
     pointer-events: none;
     position: absolute;
@@ -432,9 +434,11 @@ table {
     overflow: hidden;
     opacity: 0;
     background-color: $white;
-    .product-content{
+
+    .product-content {
         position: relative;
-        .close-icon-content{
+
+        .close-icon-content {
             width: 50px;
             height: 50px;
             background-color: $white;
@@ -445,48 +449,124 @@ table {
             box-shadow: 0 0 5px 1px;
             left: 14px;
             @include displayFlex(center, center);
-            .close{
+
+            .close {
                 width: 25px;
                 z-index: 1;
             }
         }
-        img:nth-child(2){
+
+        img:nth-child(2) {
             object-fit: cover;
             border-radius: 0 0 20px 20px;
         }
-        .close-icon-content:active{
+
+        .close-icon-content:active {
             background-color: #cdcdcd
         }
     }
-    .product-info{
+
+    .product-info {
         padding: 0 28px;
-        .price{
+
+        .price {
             font-weight: 800;
             font-size: $lg;
             margin: 8px 0;
         }
-        .title{
+
+        .title {
             color: $smooth-gray;
             margin-bottom: 24px;
         }
-        .detail{
+
+        .detail {
             color: $smooth-gray;
             margin-bottom: 52px;
 
         }
 
-        button.btn-product-add{
-            @include displayFlex(center,center);
+        button.btn-product-add {
+            @include displayFlex(center, center);
             gap: 8px;
             color: white;
-            width: 100%;     
+            width: 100%;
         }
     }
 }
 
-.product-details.show{ 
+.product-details.show {
     opacity: 1;
     pointer-events: painted;
+}
+
+.shopping-cart {
+    width: 500px;
+    background-color: $white; 
+    position: absolute;
+    right: 0;
+    transition: 0.4s;
+    top: 81px;
+    padding: 26px;
+
+    .shopping-cart-content {
+        .title {
+            @include displayFlex(null, center);
+            gap: 14px;
+            margin-bottom: 42px;
+            .img-content {
+                width: 12px;
+                rotate: 180deg;
+            }
+
+            h1 {
+                font-weight: 800;
+                font-size: $lg;
+            }
+        }
+
+        .product-cart-content {
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 28px;
+            .image-content {
+                width: 100px;
+                height: 100px; 
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: 12px;
+                }
+            }
+            .article-title{
+                color: $smooth-gray;
+            }
+            .price{
+                font-size: $lg;
+                font-weight: 800    ;
+            }
+        }
+
+        .total-price-content{
+            width: 100%;
+            @include displayFlex(space-between, center);
+            padding: 18px;
+            height: 80px;
+            background: $text-input-field; 
+            border-radius: 12px;
+            margin-bottom: 18px;
+            p:nth-child(1),
+            p:nth-child(2){
+                font-size: $lg;
+                font-weight: 800;
+            } 
+        } 
+        button{
+            width: 100%;
+        }
+    }
 }
 
 .my-order {
@@ -624,7 +704,8 @@ table {
         width: 100%;
         overflow: scroll;
     }
-    .product-details{
+
+    .product-details {
         width: 100%;
     }
 }
