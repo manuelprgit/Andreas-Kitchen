@@ -242,6 +242,7 @@ table {
         .shiping-cart {
             width: 38px;
             height: 38px;
+            cursor: pointer;
         }
     }
 }
@@ -265,6 +266,7 @@ table {
     .shiping-cart {
         width: 34px;
         height: 34px;
+        cursor: pointer;
     }
 }
 
@@ -408,6 +410,7 @@ table {
                 @include displayFlex(space-between, center);
                 margin-top: 8px;
 
+
                 .detail {
                     .price {
                         font-weight: 800;
@@ -418,6 +421,10 @@ table {
                         font-weight: 200;
                         color: $smooth-gray;
                     }
+                }
+
+                figure{
+                    cursor:pointer;
                 }
             }
         }
@@ -501,6 +508,7 @@ table {
 }
 
 .shopping-cart {
+    transform: translateY(-960px);
     width: 500px;
     background-color: $white; 
     position: absolute;
@@ -515,8 +523,9 @@ table {
             gap: 14px;
             margin-bottom: 42px;
             .img-content {
-                width: 12px;
+                width: 18px;
                 rotate: 180deg;
+                cursor: pointer;
             }
 
             h1 {
@@ -524,28 +533,34 @@ table {
                 font-size: $lg;
             }
         }
-
-        .product-cart-content {
-            display: grid;
-            grid-template-columns: auto 1fr auto auto;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 28px;
-            .image-content {
-                width: 100px;
-                height: 100px; 
-                img {
-                    object-fit: cover;
-                    width: 100%;
-                    border-radius: 12px;
+        .products-cart-content{
+            max-height: 500px;
+            overflow-y: scroll;
+            margin-bottom: 18px;
+            border-radius: 12px;
+            padding: 18px   ;
+            .product-cart-content {
+                display: grid;
+                grid-template-columns: auto 1fr auto auto;
+                align-items: center;
+                gap: 18px;
+                margin-bottom: 28px;
+                .image-content {
+                    width: 100px;
+                    height: 100px; 
+                    img {
+                        object-fit: cover;
+                        width: 100%;
+                        border-radius: 12px;
+                    }
                 }
-            }
-            .article-title{
-                color: $smooth-gray;
-            }
-            .price{
-                font-size: $lg;
-                font-weight: 800    ;
+                .article-title{
+                    color: $smooth-gray;
+                }
+                .price{
+                    font-size: $lg;
+                    font-weight: 800    ;
+                }
             }
         }
 
@@ -567,6 +582,10 @@ table {
             width: 100%;
         }
     }
+}
+
+.shopping-cart.show{
+    transform: translateY(0px);
 }
 
 .my-order {
@@ -707,5 +726,9 @@ table {
 
     .product-details {
         width: 100%;
+    }
+    .shopping-cart{
+        width: 100%;
+        padding: 12px;
     }
 }

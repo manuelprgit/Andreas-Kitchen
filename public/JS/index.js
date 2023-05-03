@@ -4,6 +4,10 @@ let mobileMenu = document.getElementById('mobile-menu');
 let productoPrueba = document.getElementById('product-1');
 let productContainer = document.getElementById('productContainer');
 let closeProductDetail = document.getElementById('closeProductDetail');
+let shoppingCart = document.getElementById('shoppingCart');
+let shoppingCartDesktop = document.getElementById('shoppingCartDesktop');
+let shoppingCartMobile = document.getElementById('shoppingCartMobile');
+let closeShoppingCart = document.getElementById('closeShoppingCart');
 
 
 burguerMenu.addEventListener('click',e=>{
@@ -21,3 +25,14 @@ productoPrueba.addEventListener('click',e=>{
 closeProductDetail.addEventListener('click',e=>{
     productContainer.classList.remove('show');
 })
+
+shoppingCartDesktop.addEventListener('click',e=>{
+    shoppingCart.classList.add('show')
+})
+shoppingCartMobile.addEventListener('click',e=>{
+    shoppingCart.classList.add('show')
+})
+
+closeShoppingCart.addEventListener('click',e=>{
+    shoppingCart.classList.remove('show');
+}) 
